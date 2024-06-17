@@ -21,14 +21,13 @@ const requestHandler = (req, res) => {
             const parsedBody = Buffer.concat(body).toString();
             console.log('parsed Body: ', parsedBody);
             const message = parsedBody.split('=')[1];
-            fs.writeFile('message.text', message, (err) => {
+            fs.writeFile('./part1/message.text', message, (err) => {
                 res.statusCode = 302;   
                 res.setHeader('Location', '/');
                 return res.end();
             });
             
         })
-        
         
     }
     res.setHeader('Content-Type', 'text/html');
