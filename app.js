@@ -7,5 +7,5 @@ const practice2 = require('./part2-practice/app')
 // practice1.run();
 // part1.run();
 
-// part2.run();
-practice2.run();
+part2.run();
+// practice2.run();
